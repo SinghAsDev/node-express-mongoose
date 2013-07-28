@@ -1,14 +1,11 @@
 doctype 5
 html
   include ../includes/head
-  body
-    include ../includes/header
-    .container
-      .page-header
-        block main
-      .messages
-        include ../includes/messages
-      .content
-        block content
+  body(data-spy='scroll', data-target='.bs-docs-sidebar')
+    include ../includes/topNav
+    block main
+    .messages
+      include ../includes/messages
+    block content
     include ../includes/footer
     include ../includes/foot
